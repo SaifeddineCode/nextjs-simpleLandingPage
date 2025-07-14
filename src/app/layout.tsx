@@ -1,5 +1,15 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import Header from "./components/Header";
+import Footer from "./components/Footer";
+
+import { Poppins } from "next/font/google";
+
+const poppins = Poppins({
+  subsets: ["latin"],
+  weight: ["400", "600"],
+  display: "swap",
+});
 
 export const metadata: Metadata = {
   title: "Simple landing page",
@@ -13,7 +23,17 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body className={poppins.className}>
+        <div>
+          <div>
+            <Header />
+          </div>
+          <div className="container mx-auto bg-blue-300">{children}</div>
+          <div>
+            <Footer />
+          </div>
+        </div>
+      </body>
     </html>
   );
 }
