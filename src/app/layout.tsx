@@ -29,9 +29,7 @@ export default function RootLayout({
             <Header />
           </div>
           <div className="container mx-auto bg-blue-300">{children}</div>
-          <div>
-            <Footer />
-          </div>
+          <div>{/* <Footer /> */}</div>
         </div>
       </body>
     </html>
