@@ -98,7 +98,7 @@ export default function slider() {
 
   return (
     <div>
-      <div className=" relative flex justify-center items-center  h-[400px] ">
+      <div className=" relative flex justify-center items-center h-[100vh] ">
         <Image
           key={currentIndex}
           alt="slideImage"
@@ -106,7 +106,7 @@ export default function slider() {
           fill
           className={`object-cover`}
         />
-        <h1 className="absolute  bg-[#c27def] p-3 text-white font-bold">
+        <h1 className="absolute text-4xl bg-[#c27def] p-3 text-white font-bold">
           {slides[currentIndex].title}{" "}
         </h1>
         <div className=" px-2 absolute w-full flex flex-row-reverse justify-between items-center">
