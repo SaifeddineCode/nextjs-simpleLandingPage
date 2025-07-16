@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 // import { useState } from "react";
 // import Image from "next/image";
@@ -87,17 +87,26 @@ export default function slider() {
     setCurrentIndex((prev) => (prev === 0 ? slides.length - 1 : prev - 1));
   };
 
+  //  this code is for autonextslide, currently i disabled it
+
+  //   useEffect(() => {
+  //     const interval = setInterval(() => {
+  //       nextSlide();
+  //     }, 3000); // change every 3 seconds
+  //     return () => clearInterval(interval);
+  //   }, []);
+
   return (
     <div>
-      <div className="relative flex justify-center items-center  h-[400px]">
+      <div className=" relative flex justify-center items-center  h-[400px] ">
         <Image
           key={currentIndex}
           alt="slideImage"
           src={slides[currentIndex].background}
           fill
-          className="object-cover transition-all duration-500 ease-in-outs "
+          className={`object-cover`}
         />
-        <h1 className="absolute transition-all duration-500 ease-in-out bg-[#c27def] p-3 text-white font-bold">
+        <h1 className="absolute  bg-[#c27def] p-3 text-white font-bold">
           {slides[currentIndex].title}{" "}
         </h1>
         <div className=" px-2 absolute w-full flex flex-row-reverse justify-between items-center">
