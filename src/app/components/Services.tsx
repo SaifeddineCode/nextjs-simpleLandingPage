@@ -60,7 +60,7 @@ export default function Services() {
           return (
             <div
               key={index}
-              className="flex flex-1  min-w-[calc(33.33%-12px)] flex-col justify-center items-center border hover:border-gray-400  border-gray-200 p-10 rounded-lg "
+              className="flex flex-1 bg-gray-50 hover:bg-white  min-w-[calc(33.33%-12px)] flex-col justify-center items-center border hover:border-gray-400  border-gray-200 p-10 rounded-lg "
             >
               {e.ServiceIcon}
               <span>{e.ServiceTitle}</span>

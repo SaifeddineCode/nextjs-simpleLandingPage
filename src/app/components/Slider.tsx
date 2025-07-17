@@ -78,13 +78,31 @@ export default function slider() {
   ];
 
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [isChanging, setIsChanging] = useState(false);
 
+  // const nextSlide = () => {
+  //   setIsChanging(true);
+  //   setCurrentIndex((prev) => (prev + 1 === slides.length ? 0 : prev + 1));
+  //   setIsChanging(false);
+  // };
   const nextSlide = () => {
-    setCurrentIndex((prev) => (prev + 1 === slides.length ? 0 : prev + 1));
+    setIsChanging(true);
+    setTimeout(() => {
+      setCurrentIndex((prev) => (prev + 1 === slides.length ? 0 : prev + 1));
+      setIsChanging(false);
+    }, 500); // Match this duration with your CSS transition
   };
 
+  // const prevSlide = () => {
+  //   setCurrentIndex((prev) => (prev === 0 ? slides.length - 1 : prev - 1));
+  // };
+
   const prevSlide = () => {
-    setCurrentIndex((prev) => (prev === 0 ? slides.length - 1 : prev - 1));
+    setIsChanging(true);
+    setTimeout(() => {
+      setCurrentIndex((prev) => (prev === 0 ? slides.length - 1 : prev - 1));
+      setIsChanging(false);
+    }, 500);
   };
 
   //  this code is for autonextslide, currently i disabled it
@@ -104,7 +122,9 @@ export default function slider() {
           alt="slideImage"
           src={slides[currentIndex].background}
           fill
-          className={`object-cover`}
+          className={` object-cover transition-opacity duration-500  ${
+            isChanging ? "opacity-0" : "opacity-100"
+          }`}
         />
         <h1 className="absolute text-4xl bg-[#c27def] p-3 text-white font-bold">
           {slides[currentIndex].title}{" "}
