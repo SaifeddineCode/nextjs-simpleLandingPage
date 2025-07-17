@@ -50,17 +50,18 @@ export default function Expertises() {
           votre transformation vers le digital.
         </p>
       </div> */}
-      <div className="flex flex-col flex-wrap justify-between w-full gap-16  ">
+      <div className="flex min-h-screen flex-col flex-wrap justify-between w-full gap-16  ">
         {Expertises.map((e, index) => {
           return (
             <div
               key={index}
-              className={`bg-white  flex gap-10 items-start ${
+              className={`bg-white  h-full  flex gap-10 items-start ${
                 index % 2 === 0 ? "flex-row-reverse" : "flex-row"
-              }  justify-between   flex-1  min-w-[calc(33.33%-12px)]`}
+              }  justify-between `}
             >
-              <div className="w-1/2 relative h-[300px] overflow-hidden flex-1">
+              <div className=" relative h-[300px] w-1/2  overflow-hidden ">
                 <Image
+                  title={e.title}
                   fill
                   className="object-cover"
                   alt="expertise-image"
