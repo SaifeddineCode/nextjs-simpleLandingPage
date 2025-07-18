@@ -11,8 +11,31 @@ import {
 import { IoMail } from "react-icons/io5";
 
 export default function Header() {
+  const menu = [
+    {
+      menuTitle: "Accueil",
+      menuLink: "/",
+    },
+    {
+      menuTitle: "Qui sommes nous",
+      menuLink: "/qui-sommes-nous",
+    },
+    {
+      menuTitle: "Nos services",
+      menuLink: "/nos-services",
+    },
+    {
+      menuTitle: "Nos realisations",
+      menuLink: "/nos-realisations",
+    },
+    {
+      menuTitle: "Blog",
+      menuLink: "/Blog",
+    },
+  ];
+
   return (
-    <header>
+    <header className=" bg-white shadow-md">
       {/* TOP BAR */}
       <div className="bg-black flex justify-between p-3">
         {/* social media */}
@@ -50,7 +73,7 @@ export default function Header() {
           </div>
         </div>
       </div>
-      <div className="flex justify-between items-center px-5 py-3 ">
+      <div className="flex  justify-between items-center px-5 py-3 ">
         <Link href="/">
           <Image
             alt="logo"
@@ -61,7 +84,20 @@ export default function Header() {
         </Link>
         <nav aria-label="Header navigation">
           <ul className="flex  justify-between gap-3 ">
-            <li>
+            {menu.map((navLink, index) => {
+              return (
+                <Link
+                  key={index}
+                  className="text-sm  font-semibold"
+                  href={navLink.menuLink}
+                >
+                  {" "}
+                  {navLink.menuTitle}
+                </Link>
+              );
+            })}
+
+            {/* <li>
               <Link className="text-xs  font-semibold" href="/">
                 Accueil
               </Link>
@@ -80,7 +116,7 @@ export default function Header() {
               <Link className="text-xs  font-semibold" href="/nos-realisations">
                 Nos realisations
               </Link>
-            </li>
+            </li> */}
             {/* <li>
               <a className="text-xs  font-semibol" href="/contact">
                 Contact
@@ -90,7 +126,7 @@ export default function Header() {
         </nav>
         <Link
           href="/contact"
-          className=" text-xs text-white bg-[#6e4b99] p-1 rounded-sm"
+          className=" text-sm text-white bg-[#6e4b99] p-1 rounded-sm"
         >
           Contactez-nous
         </Link>

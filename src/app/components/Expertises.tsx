@@ -63,18 +63,18 @@ export default function Expertises() {
                 <Image
                   title={e.title}
                   fill
-                  className="object-cover"
+                  className="object-cover hover:scale-105 duration-500 transition-all "
                   alt="expertise-image"
                   src={e.image}
                 />
               </div>
               <div className="w-1/2 flex flex-col gap-2 text-black">
                 <div className=" text-[10px] flex gap-2 justify-start  items-center ">
-                  <span>{e.subTitle}</span>
+                  <span className="text-sm">{e.subTitle}</span>
                   <div className="w-1/3 h-[0.1px] bg-[#c27def] "></div>
                 </div>
                 <h3 className="text-4xl font-bold mb-5">{e.title}</h3>
-                <p className="text-xs leading-6 text-justify ">{e.text}</p>
+                <p className="text-sm leading-6 text-justify ">{e.text}</p>
                 <Link
                   href={"/contact"}
                   className="bg-[#c27def] hover:border hover:bg-white hover:text-[#c27def]   font-bold text-xs text-white text-center  py-2 rounded-md"

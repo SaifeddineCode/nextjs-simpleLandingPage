@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { CgSoftwareDownload } from "react-icons/cg";
 import { CiDatabase } from "react-icons/ci";
 import { FaLaptopCode } from "react-icons/fa";
@@ -11,6 +12,7 @@ export default function Services() {
     {
       ServiceTitle: "Web & Mobile",
       ServiceIcon: <FaLaptopCode size={60} />,
+      ServiceLink: "/developpement",
     },
     {
       ServiceTitle: "integration",
@@ -49,7 +51,7 @@ export default function Services() {
   return (
     <div className="flex py-5 px-10 flex-col justify-center items-center">
       <div className="flex flex-col justify-center items-center my-5">
-        <h2 className=" text-2xl font-bold">SERVICES</h2>
+        <h2 className=" text-4xl font-bold">SERVICES</h2>
         <p>
           Société de Services en Ingénierie Informatique, basée à Agadir au
           Maroc.
@@ -63,7 +65,13 @@ export default function Services() {
               className="flex flex-1 bg-gray-50 hover:bg-white  min-w-[calc(33.33%-12px)] flex-col justify-center items-center border hover:border-gray-400  border-gray-200 p-10 rounded-lg "
             >
               {e.ServiceIcon}
-              <span>{e.ServiceTitle}</span>
+              <span className="text-2xl">{e.ServiceTitle}</span>
+              <Link
+                className="text-md my-3 text-white px-2 py-1 rounded bg-[#c27def]"
+                href="/"
+              >
+                En savoir plus
+              </Link>
             </div>
           );
         })}
@@ -80,6 +88,12 @@ export default function Services() {
           <span>Web & Mobile</span>
         </div> */}
       </div>
+      <Link
+        className="text-lg border mt-5 px-2 py-1 rounded hover:bg-[#c27def]"
+        href={"/nos-services"}
+      >
+        Voir tous les services
+      </Link>
     </div>
   );
 }
