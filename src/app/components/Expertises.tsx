@@ -63,7 +63,7 @@ export default function Expertises() {
                 <Image
                   title={e.title}
                   fill
-                  className="object-cover hover:scale-105 duration-500 transition-all "
+                  className="object-cover hover:scale-105 duration-500 transition-all ease-out "
                   alt="expertise-image"
                   src={e.image}
                 />
@@ -77,7 +77,7 @@ export default function Expertises() {
                 <p className="text-sm leading-6 text-justify ">{e.text}</p>
                 <Link
                   href={"/contact"}
-                  className="bg-[#c27def] hover:border hover:bg-white hover:text-[#c27def]   font-bold text-xs text-white text-center  py-2 rounded-md"
+                  className="bg-[#c27def] border hover:border hover:bg-white hover:text-[#c27def]   font-bold text-xs text-white text-center  py-2 rounded-md"
                 >
                   Nous contacter
                 </Link>
