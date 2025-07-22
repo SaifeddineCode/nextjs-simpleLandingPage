@@ -42,7 +42,7 @@ export default function Expertises() {
   ];
 
   return (
-    <div className="flex my-[100px] px-40 flex-col justify-center items-center ">
+    <div className="flex my-[100px] md:px-40 flex-col justify-center items-center ">
       {/* <div className="flex flex-col justify-center items-center my-5">
         <h2 className=" text-black text-3xl font-bold">Expertises</h2>
         <p className="text-gray-500 text-sm ">
@@ -50,16 +50,16 @@ export default function Expertises() {
           votre transformation vers le digital.
         </p>
       </div> */}
-      <div className="flex min-h-screen flex-col flex-wrap justify-between w-full gap-16  ">
+      <div className="flex min-h-screen flex-col flex-wrap justify-between w-full gap-5 md:gap-16  ">
         {Expertises.map((e, index) => {
           return (
             <div
               key={index}
-              className={`bg-white  h-full  flex gap-10 items-start ${
-                index % 2 === 0 ? "flex-row-reverse" : "flex-row"
-              }  justify-between `}
+              className={`bg-white p-10 md:p-0  h-full flex flex-col gap-10 items-start ${
+                index % 2 === 0 ? "md:flex-row-reverse" : "md:flex-row"
+              }  md:justify-between `}
             >
-              <div className=" relative h-[300px] w-1/2  overflow-hidden ">
+              <div className=" relative h-[300px] w-full md:w-1/2  overflow-hidden ">
                 <Image
                   title={e.title}
                   fill
@@ -68,7 +68,7 @@ export default function Expertises() {
                   src={e.image}
                 />
               </div>
-              <div className="w-1/2 flex flex-col gap-2 text-black">
+              <div className="w-full md:w-1/2 flex flex-col gap-2 text-black">
                 <div className=" text-[10px] flex gap-2 justify-start  items-center ">
                   <span className="text-sm">{e.subTitle}</span>
                   <div className="w-1/3 h-[0.1px] bg-[#c27def] "></div>
@@ -77,7 +77,7 @@ export default function Expertises() {
                 <p className="text-sm leading-6 text-justify ">{e.text}</p>
                 <Link
                   href={"/contact"}
-                  className="bg-[#c27def] border hover:border hover:bg-white hover:text-[#c27def]   font-bold text-xs text-white text-center  py-2 rounded-md"
+                  className="bg-[#c27def] border hover:border hover:bg-white hover:text-[#c27def]   font-bold text-md text-white text-center  py-4 rounded-md"
                 >
                   Nous contacter
                 </Link>

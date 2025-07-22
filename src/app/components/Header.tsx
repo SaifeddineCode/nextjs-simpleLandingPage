@@ -95,18 +95,19 @@ export default function Header() {
             ${!navOpened && "hidden"} 
             absolute md:static
             //top-[110px]
-             top-[160px]
-             sm:top-[130px]
+            top-[160px]
+            sm:top-[130px]
+            z-[9999]
             //${navOpened ? "right-[50px]" : "right-[-200px]"} 
             ${navOpened && "right-[0px]"} 
-             bg-gray-50
-             md:bg-transparent
-             z-50
-             w-full
+          bg-gray-50
+            md:bg-transparent
+            z-50
+            w-full
             transition-all
-             duration-500
-             ease-in
-             select-none
+            duration-500
+            ease-in
+            select-none
           flex-1 justify-between gap-10 items-center`}
           aria-label="Header navigation"
         >
@@ -127,16 +128,18 @@ export default function Header() {
           </ul>
           <Link
             href="/contact"
-            className="w-full md:w-auto border bg-[#6e4b99] md:bg-transparent hover:bg-white text-center text-lg md:text-sm   md:border-2 md:hover:bg-[#6e4b99] px-3 py-2 md:rounded-sm"
+            className="w-full md:w-auto border bg-[#6e4b99] md:bg-transparent hover:bg-white text-center text-lg md:text-sm   md:border-2 md:hover:bg-[#6e4b99] px-3 py-4 md:py-2 md:rounded-sm"
           >
             Contactez-nous
           </Link>
         </nav>
         <div>
           <RxHamburgerMenu
-            size={30}
-            className="md:hidden  cursor-pointer"
-            color="black"
+            size={40}
+            className={`md:hidden ${
+              navOpened ? "bg-white" : "bg-[#6e4b99]"
+            } border border-[#6e4b99] p-1 rounded-lg bg-[#6e4b99] cursor-pointer`}
+            color={navOpened ? "black" : "white"}
             onClick={toggleNavBar}
           />
         </div>

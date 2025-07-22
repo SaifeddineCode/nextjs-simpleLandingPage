@@ -52,7 +52,7 @@ export default function Services() {
     <div className="flex py-5 px-10 flex-col justify-center items-center">
       <div className="flex flex-col justify-center items-center my-5">
         <h2 className=" text-4xl font-bold">SERVICES</h2>
-        <p>
+        <p className="text-center">
           Société de Services en Ingénierie Informatique, basée à Agadir au
           Maroc.
         </p>
@@ -62,12 +62,12 @@ export default function Services() {
           return (
             <div
               key={index}
-              className="flex flex-1 bg-gray-50 hover:bg-white  min-w-[calc(33.33%-12px)] flex-col justify-center items-center border hover:border-gray-400  border-gray-200 p-10 rounded-lg "
+              className="flex w-full md:flex-1 bg-gray-50 hover:bg-white  sm:min-w-[calc(33.33%-12px)] flex-col justify-center items-center border hover:border-gray-400  border-gray-200 p-10 rounded-lg "
             >
               {e.ServiceIcon}
-              <span className="text-2xl">{e.ServiceTitle}</span>
+              <span className="text-2xl text-center">{e.ServiceTitle}</span>
               <Link
-                className="text-md my-3 text-white px-2 py-1 rounded bg-[#c27def]"
+                className="text-md my-3 text-center text-white px-2 py-1 rounded bg-[#c27def]"
                 href="/"
               >
                 En savoir plus

@@ -10,7 +10,7 @@ import {
 export default function Footer() {
   return (
     <div className="bg-white relative flex flex-col justify-center items-center  ">
-      <div className=" w-2/3 p-25 bg-[#231e1f] flex flex-col items-start gap-5">
+      <div className="w-full md:w-2/3 p-15 text-justify md:p-25 bg-[#231e1f] flex flex-col items-start gap-5">
         <div>
           <h4 className="text-4xl font-extrabold text-white">
             Travaillons ensemble
@@ -32,7 +32,7 @@ export default function Footer() {
         </Link>
       </div>
       <div className="p-10 w-full flex items-end justify-between ">
-        <div className="flex items-end gap-5">
+        <div className="flex items-start flex-col sm:flex-row sm:items-end gap-5">
           <Link href={"/"}>
             <Image
               alt="logo"
@@ -42,7 +42,7 @@ export default function Footer() {
             />
           </Link>
           <div>
-            <span className="text-black">
+            <span className="text-black text-xs sm:text-md">
               Copyright 2025 ©{" "}
               <Link className="text-[#c27def] font-bold" href={"/"}>
                 NetWaciila
@@ -51,7 +51,7 @@ export default function Footer() {
             </span>
           </div>
         </div>
-        <div className="flex gap-3 ">
+        <div className="flex flex-col sm:flex-row gap-3 ">
           <Link href="/facebook">
             <FaFacebookF
               title="Facebook"

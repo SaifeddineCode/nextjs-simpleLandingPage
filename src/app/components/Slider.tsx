@@ -1,7 +1,9 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import { useEffect, useState } from "react";
+import { FaAngleLeft, FaAngleRight } from "react-icons/fa";
 
 // import { useState } from "react";
 // import Image from "next/image";
@@ -64,16 +66,19 @@ import { useEffect, useState } from "react";
 export default function slider() {
   const slides = [
     {
-      background: "/slide1.png",
+      background: "/slide1.jpg",
       title: "Ingénierie & services informatiques",
+      text: "Des solutions sur mesure pour optimiser votre infrastructure IT et améliorer votre productivité.",
     },
     {
-      background: "/slide2.png",
+      background: "/slide2.jpg",
       title: "Spécialisé dans la transformation digitale",
+      text: "Accompagnement complet pour moderniser vos processus et adopter les dernières technologies.",
     },
     {
       background: "/slide3.jpg",
       title: "Empruntez la voie du digital",
+      text: "Stratégies innovantes pour propulser votre entreprise à l'ère numérique.",
     },
   ];
 
@@ -116,7 +121,7 @@ export default function slider() {
 
   return (
     <div>
-      <div className=" relative select-none flex justify-center items-center h-[100vh] ">
+      <div className="relative h-[700px] sm:h-screen select-none flex justify-center items-center">
         <Image
           key={currentIndex}
           alt="slideImage"
@@ -126,21 +131,27 @@ export default function slider() {
             isChanging ? "opacity-0" : "opacity-100"
           }`}
         />
-        <h1 className="absolute text-4xl bg-[#c27def] p-3 text-white font-bold">
-          {slides[currentIndex].title}{" "}
-        </h1>
-        <div className=" px-2 absolute w-full flex flex-row-reverse justify-between items-center">
+        <div className="absolute px-10 flex flex-col items-start gap-2 ">
+          <h1 className="text-[50px] sm:text-4xl   text-white font-bold">
+            {slides[currentIndex].title}
+          </h1>
+          <p className="text-white"> {slides[currentIndex].text} </p>
+          <Link className="bg-[#c27def] px-3 py-2 " href={"/nos-services"}>
+            En savoir plus
+          </Link>
+        </div>
+        <div className=" px-2 absolute w-full  flex flex-row-reverse justify-between items-center">
           <button
-            className="bg-white p-1  cursor-pointer rounded-full"
+            className="bg-white p-1 opacity-50 sm:opacity-100  cursor-pointer rounded-full "
             onClick={nextSlide}
           >
-            ▶
+            <FaAngleRight size={40} />
           </button>
           <button
-            className="bg-white cursor-pointer p-1 rounded-full"
+            className="bg-white opacity-50 sm:opacity-100  cursor-pointer p-1 rounded-full"
             onClick={prevSlide}
           >
-            ◀
+            <FaAngleLeft size={40} />
           </button>
         </div>
       </div>
