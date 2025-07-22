@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function Tools() {
   return (
-    <div className="bg-gray-50 px-20 pt-20 pb-40">
+    <div className="bg-gray-50 p-20">
       <div className="flex flex-col justify-center items-center">
         <h3 className="text-black font-bold text-4xl mb-5">Notre Approche</h3>
         <span className="text-black">

@@ -1,6 +1,7 @@
+"use client";
 import Image from "next/image";
 import Link from "next/link";
-import { AiFillTwitterCircle } from "react-icons/ai";
+import { useState } from "react";
 import {
   FaFacebookF,
   FaInstagram,
@@ -9,6 +10,7 @@ import {
   FaTwitter,
 } from "react-icons/fa";
 import { IoMail } from "react-icons/io5";
+import { RxHamburgerMenu } from "react-icons/rx";
 
 export default function Header() {
   const menu = [
@@ -34,102 +36,116 @@ export default function Header() {
     },
   ];
 
+  const [navOpened, setNavOpened] = useState(false);
+
+  const toggleNavBar = () => {
+    setNavOpened((e) => !e);
+  };
+
   return (
     <header className=" bg-white shadow-md">
       {/* TOP BAR */}
-      <div className="bg-black flex justify-between p-3">
+      <div className="bg-black flex-col sm:flex-row items-center gap-4 flex justify-between p-3">
         {/* social media */}
         <div className="flex gap-3 ">
           <Link href="/facebook">
-            <FaFacebookF color="white" size={12} />
+            <FaFacebookF color="white" size={17} />
           </Link>
           <Link href="/twitter">
-            <FaTwitter color="white" size={12} />
+            <FaTwitter color="white" size={17} />
           </Link>
           <Link href="/linkedin">
             {" "}
-            <FaLinkedinIn color="white" size={12} />
+            <FaLinkedinIn color="white" size={17} />
           </Link>
           <Link href="/instagram">
             {" "}
-            <FaInstagram color="white" size={12} />
+            <FaInstagram color="white" size={17} />
           </Link>
         </div>
         {/* informations */}
         <div className="flex gap-3">
           <div className="flex items-center gap-1">
-            <FaPhoneAlt color="white" size={12} />
-            <Link className="text-white text-xs " href={"tel:+212600000000"}>
+            <FaPhoneAlt color="white" size={17} />
+            <Link className="text-white text-sm " href={"tel:+212600000000"}>
               {" "}
               +212600000000
             </Link>
           </div>
           <div className="flex items-center gap-1">
-            <IoMail color="white" size={12} />
-            <Link className="text-white text-xs" href={"mailto:test@gmail.com"}>
+            <IoMail color="white" size={17} />
+            <Link className="text-white text-sm" href={"mailto:test@gmail.com"}>
               {" "}
               test@gmail.com
             </Link>
           </div>
         </div>
       </div>
-      <div className="flex  justify-between items-center px-5 py-3 ">
-        <Link href="/">
+      <div className="flex justify-between gap-10 items-center px-5 py-3 ">
+        <Link className="2xl:flex-1 select-none" href="/">
           <Image
             alt="logo"
             src={"/netwaciila-logo.png"}
-            width={100}
+            width={150}
             height={70}
           />
         </Link>
-        <nav aria-label="Header navigation">
-          <ul className="flex  justify-between gap-3 ">
+        <nav
+          className={`flex flex-col md:flex-row md:flex 
+            ${!navOpened && "hidden"} 
+            absolute md:static
+            //top-[110px]
+             top-[160px]
+             sm:top-[130px]
+            //${navOpened ? "right-[50px]" : "right-[-200px]"} 
+            ${navOpened && "right-[0px]"} 
+             bg-gray-50
+             md:bg-transparent
+             z-50
+             w-full
+            transition-all
+             duration-500
+             ease-in
+             select-none
+          flex-1 justify-between gap-10 items-center`}
+          aria-label="Header navigation"
+        >
+          <ul className="flex w-full md:w-auto rounded-sm md:rounded-none flex-col md:flex-row gap-7 md:gap-3 select-none ">
             {menu.map((navLink, index) => {
               return (
                 <Link
                   key={index}
-                  className="text-sm  font-semibold"
+                  className="text-md md:text-sm px-10 py-5  md:p-0 hover:bg-[#6e4b99] md:hover:bg-transparent font-semibold select-none"
                   href={navLink.menuLink}
+                  onClick={toggleNavBar}
                 >
                   {" "}
                   {navLink.menuTitle}
                 </Link>
               );
             })}
-
-            {/* <li>
-              <Link className="text-xs  font-semibold" href="/">
-                Accueil
-              </Link>
-            </li>
-            <li>
-              <Link className="text-xs  font-semibold" href="/qui-sommes-nous">
-                Qui sommes nous
-              </Link>
-            </li>
-            <li>
-              <Link className="text-xs  font-semibold" href="/nos-services">
-                Nos services
-              </Link>
-            </li>
-            <li>
-              <Link className="text-xs  font-semibold" href="/nos-realisations">
-                Nos realisations
-              </Link>
-            </li> */}
-            {/* <li>
-              <a className="text-xs  font-semibol" href="/contact">
-                Contact
-              </a>
-            </li> */}
           </ul>
+          <Link
+            href="/contact"
+            className="w-full md:w-auto border bg-[#6e4b99] md:bg-transparent hover:bg-white text-center text-lg md:text-sm   md:border-2 md:hover:bg-[#6e4b99] px-3 py-2 md:rounded-sm"
+          >
+            Contactez-nous
+          </Link>
         </nav>
-        <Link
+        <div>
+          <RxHamburgerMenu
+            size={30}
+            className="md:hidden  cursor-pointer"
+            color="black"
+            onClick={toggleNavBar}
+          />
+        </div>
+        {/* <Link
           href="/contact"
           className=" text-sm text-white bg-[#6e4b99] p-1 rounded-sm"
         >
           Contactez-nous
-        </Link>
+        </Link> */}
       </div>
     </header>
   );

@@ -116,7 +116,7 @@ export default function slider() {
 
   return (
     <div>
-      <div className=" relative flex justify-center items-center h-[100vh] ">
+      <div className=" relative select-none flex justify-center items-center h-[100vh] ">
         <Image
           key={currentIndex}
           alt="slideImage"
