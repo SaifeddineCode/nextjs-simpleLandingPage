@@ -52,7 +52,7 @@ export default function Footer() {
           </div>
         </div>
         <div className="flex flex-col sm:flex-row gap-3 ">
-          <Link href="/facebook">
+          <Link target="_blank" href="https://www.facebook.com/netwacila">
             <FaFacebookF
               title="Facebook"
               className="border hover:bg-[#c27def] rounded-full p-1"
@@ -60,7 +60,7 @@ export default function Footer() {
               size={30}
             />
           </Link>
-          <Link href="/twitter">
+          <Link target="_blank" href="https://x.com/netwaciila">
             <FaTwitter
               title="Twitter"
               color="black"
@@ -68,7 +68,10 @@ export default function Footer() {
               size={30}
             />
           </Link>
-          <Link href="/linkedin">
+          <Link
+            target="_blank"
+            href="https://www.linkedin.com/company/netwaciila/"
+          >
             <FaLinkedinIn
               title="Linkedin"
               color="black"
@@ -76,7 +79,7 @@ export default function Footer() {
               size={30}
             />
           </Link>
-          <Link href="/instagram">
+          <Link target="_blank" href="https://www.instagram.com/netwaciila/#">
             <FaInstagram
               title="Instagram"
               color="black"

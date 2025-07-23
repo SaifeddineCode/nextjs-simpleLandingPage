@@ -47,19 +47,20 @@ export default function Header() {
       {/* TOP BAR */}
       <div className="bg-black flex-col sm:flex-row items-center gap-4 flex justify-between p-3">
         {/* social media */}
-        <div className="flex gap-3 ">
-          <Link href="/facebook">
+        <div className="flex gap-3  ">
+          <Link target="_blank" href="https://www.facebook.com/netwacila">
             <FaFacebookF color="white" size={17} />
           </Link>
-          <Link href="/twitter">
+          <Link target="_blank" href="https://x.com/netwaciila">
             <FaTwitter color="white" size={17} />
           </Link>
-          <Link href="/linkedin">
-            {" "}
+          <Link
+            target="_blank"
+            href="https://www.linkedin.com/company/netwaciila/"
+          >
             <FaLinkedinIn color="white" size={17} />
           </Link>
-          <Link href="/instagram">
-            {" "}
+          <Link target="_blank" href="https://www.instagram.com/netwaciila/#">
             <FaInstagram color="white" size={17} />
           </Link>
         </div>
