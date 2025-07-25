@@ -1,3 +1,9 @@
+import UnderConstrutcion from "../components/UnderConstruction";
+
 export default function contact() {
-  return <>contact PAGE</>;
+  return (
+    <>
+      <UnderConstrutcion pageName="Contact" />
+    </>
+  );
 }

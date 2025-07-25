@@ -57,14 +57,14 @@ export default function Services() {
           Maroc.
         </p>
       </div>
-      <div className="flex flex-wrap justify-between w-full gap-4  ">
+      <div className="flex flex-wrap justify-between w-full gap-4   ">
         {Services.map((e, index) => {
           return (
             <div
               key={index}
               className="flex w-full md:flex-1 bg-gray-50 hover:bg-white  sm:min-w-[calc(33.33%-12px)] flex-col justify-center items-center border hover:border-gray-400  border-gray-200 p-10 rounded-lg "
             >
-              {e.ServiceIcon}
+              <span>{e.ServiceIcon}</span>
               <span className="text-2xl text-center">{e.ServiceTitle}</span>
               <Link
                 className="text-md my-3 text-center text-white px-2 py-1 rounded bg-[#c27def]"

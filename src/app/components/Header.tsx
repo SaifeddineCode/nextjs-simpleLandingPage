@@ -32,7 +32,7 @@ export default function Header() {
     },
     {
       menuTitle: "Blog",
-      menuLink: "/Blog",
+      menuLink: "/blog",
     },
   ];
 
@@ -49,19 +49,19 @@ export default function Header() {
         {/* social media */}
         <div className="flex gap-3  ">
           <Link target="_blank" href="https://www.facebook.com/netwacila">
-            <FaFacebookF color="white" size={17} />
+            <FaFacebookF color="white" size={20} />
           </Link>
           <Link target="_blank" href="https://x.com/netwaciila">
-            <FaTwitter color="white" size={17} />
+            <FaTwitter color="white" size={20} />
           </Link>
           <Link
             target="_blank"
             href="https://www.linkedin.com/company/netwaciila/"
           >
-            <FaLinkedinIn color="white" size={17} />
+            <FaLinkedinIn color="white" size={20} />
           </Link>
           <Link target="_blank" href="https://www.instagram.com/netwaciila/#">
-            <FaInstagram color="white" size={17} />
+            <FaInstagram color="white" size={20} />
           </Link>
         </div>
         {/* informations */}
@@ -129,6 +129,7 @@ export default function Header() {
           </ul>
           <Link
             href="/contact"
+            onClick={toggleNavBar}
             className="w-full md:w-auto border bg-[#6e4b99] md:bg-transparent hover:bg-white text-center text-lg md:text-sm   md:border-2 md:hover:bg-[#6e4b99] px-3 py-4 md:py-2 md:rounded-sm"
           >
             Contactez-nous

@@ -1,3 +1,5 @@
+import UnderConstrutcion from "../components/UnderConstruction";
+
 export default function QuiSommesNous() {
-  return <>QUI SOMMES NOUS PAGE</>;
+  return <UnderConstrutcion pageName={"qui sommes nous"} />;
 }

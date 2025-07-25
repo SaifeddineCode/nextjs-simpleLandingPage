@@ -1,3 +1,9 @@
+import UnderConstrutcion from "../components/UnderConstruction";
+
 export default function NOSSERVICES() {
-  return <>NOSSERVICES PAGE</>;
+  return (
+    <>
+      <UnderConstrutcion pageName="Nos services" />
+    </>
+  );
 }
