@@ -48,36 +48,49 @@ export default function Header() {
       <div className="bg-black flex-col sm:flex-row items-center gap-4 flex justify-between p-3">
         {/* social media */}
         <div className="flex gap-3  ">
-          <Link target="_blank" href="https://www.facebook.com/netwacila">
-            <FaFacebookF color="white" size={20} />
-          </Link>
-          <Link target="_blank" href="https://x.com/netwaciila">
-            <FaTwitter color="white" size={20} />
+          <Link
+            className="bg-[#c27def] rounded-full p-1"
+            target="_blank"
+            href="https://www.facebook.com/netwacila"
+          >
+            <FaFacebookF color="black" size={20} />
           </Link>
           <Link
+            className="bg-[#c27def] rounded-full p-1"
+            target="_blank"
+            href="https://x.com/netwaciila"
+          >
+            <FaTwitter color="black" size={20} />
+          </Link>
+          <Link
+            className="bg-[#c27def] rounded-full p-1"
             target="_blank"
             href="https://www.linkedin.com/company/netwaciila/"
           >
-            <FaLinkedinIn color="white" size={20} />
+            <FaLinkedinIn color="black" size={20} />
           </Link>
-          <Link target="_blank" href="https://www.instagram.com/netwaciila/#">
-            <FaInstagram color="white" size={20} />
+          <Link
+            className="bg-[#c27def] rounded-full p-1"
+            target="_blank"
+            href="https://www.instagram.com/netwaciila/#"
+          >
+            <FaInstagram color="black" size={20} />
           </Link>
         </div>
         {/* informations */}
         <div className="flex gap-3">
           <div className="flex items-center gap-1">
             <FaPhoneAlt color="white" size={17} />
-            <Link className="text-white text-sm " href={"tel:+212600000000"}>
+            <Link className="text-white text-sm " href={"tel:+212629067021"}>
               {" "}
-              +212600000000
+              +212(0)629067021
             </Link>
           </div>
           <div className="flex items-center gap-1">
             <IoMail color="white" size={17} />
             <Link className="text-white text-sm" href={"mailto:test@gmail.com"}>
               {" "}
-              test@gmail.com
+              contact@netwaciila.ma
             </Link>
           </div>
         </div>
@@ -87,7 +100,7 @@ export default function Header() {
           <Image
             alt="logo"
             src={"/netwaciila-logo.png"}
-            width={150}
+            width={120}
             height={70}
           />
         </Link>
@@ -117,11 +130,10 @@ export default function Header() {
               return (
                 <Link
                   key={index}
-                  className="text-md md:text-sm px-10 py-5  md:p-0 hover:bg-[#6e4b99] md:hover:bg-transparent font-semibold select-none"
+                  className="hover:text-[#6e4b99] text-md md:text-sm px-10 py-5  md:p-0 hover:bg-[#6e4b99] md:hover:bg-transparent font-semibold select-none"
                   href={navLink.menuLink}
                   onClick={toggleNavBar}
                 >
-                  {" "}
                   {navLink.menuTitle}
                 </Link>
               );

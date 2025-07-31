@@ -7,19 +7,19 @@ export default function Expertises() {
       title: "Consulting",
       subTitle: "L'expertise qui transforme vos défis en solutions",
       text: "Netwaciila accompagne votre entreprise dans la transformation digitale de vos processus clés. Nos consultants expérimentés analysent vos besoins métiers pour concevoir des solutions informatiques parfaitement adaptées à vos enjeux opérationnels et à votre stratégie globale. Nous traduisons vos exigences spécifiques en architectures techniques performantes et évolutives.Notre méthodologie collaborative nous permet de comprendre en profondeur vos défis uniques et vos contraintes organisationnelles. Nous combinons expertise sectorielle et connaissance des dernières technologies pour vous proposer des recommandations pragmatiques et immédiatement actionnables. Chaque solution est pensée pour s'intégrer harmonieusement à votre écosystème existant.De l'analyse initiale à la mise en œuvre, Netwaciila garantit des résultats concrets et mesurables pour votre entreprise.",
-      image: "/consulting.png",
+      image: "/consulting.jpg",
     },
     {
       title: "Designing",
       subTitle: "L'art de donner vie à votre identité digitale",
       text: "Netwaciila allie expertise en UX design, ergonomie web et création graphique pour concevoir des interfaces qui incarnent parfaitement votre identité visuelle. Nos designers transforment vos valeurs et votre ADN en expériences utilisateur fluides et mémorables.Nous appliquons une méthodologie centrée sur l'utilisateur, depuis les wireframes jusqu'aux maquettes haute-fidélité. Chaque élément graphique est pensé pour guider naturellement l'utilisateur tout en renforçant votre image de marque.De la conception à l'implémentation, nous veillons à ce que le rendu final soit à la fois esthétique, fonctionnel et parfaitement aligné avec vos objectifs business. Nos créations allient beauté visuelle et performance technique.",
-      image: "/designing.png",
+      image: "/designing.jpg",
     },
     {
       title: "Coding",
       subTitle: "Des lignes de code qui créent de la valeur",
       text: "Netwaciila développe des applications web et mobiles haute performance pour Android et iOS. Nos solutions techniques s'appuient sur les dernières technologies et des architectures robustes, garantissant évolutivité et sécurité.Notre équipe pluridisciplinaire rassemble développeurs full-stack, spécialistes DevOps, testeurs QA et chefs de projet agile. Cette synergie nous permet de livrer des produits stables, optimisés et parfaitement adaptés à vos besoins.Nous combinons excellence technique et approche métier pour transformer vos idées en solutions concrètes. Du MVP aux applications complexes, chaque ligne de code est écrite dans l'optique de créer de la valeur durable.",
-      image: "/coding.png",
+      image: "/coding.jpg",
     },
     {
       title: "Sous-traitance informatique",

@@ -131,7 +131,7 @@ export default function slider() {
             isChanging ? "opacity-0" : "opacity-100"
           }`}
         />
-        <div className="absolute px-10 flex flex-col items-start gap-2 ">
+        <div className="absolute mx-10 flex flex-col items-start gap-2 ">
           <h1 className="text-[50px] sm:text-4xl   text-white font-bold">
             {slides[currentIndex].title}
           </h1>

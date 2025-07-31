@@ -1,4 +1,5 @@
 import About from "./components/About";
+import ButtonContact from "./components/ButtonContact";
 import Expertises from "./components/Expertises";
 import Partners from "./components/Partners";
 import Services from "./components/Services";
