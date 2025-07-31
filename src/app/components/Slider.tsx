@@ -63,7 +63,7 @@ import { FaAngleLeft, FaAngleRight } from "react-icons/fa";
 //     </div>
 //   );
 // }
-export default function slider() {
+export default function Slider() {
   const slides = [
     {
       background: "/slide1.jpg",

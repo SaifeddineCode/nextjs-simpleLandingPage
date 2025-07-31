@@ -18,10 +18,10 @@ export default function Footer() {
           <div className="w-[70px] mt-3 h-0.5 bg-[#c27def]"></div>
         </div>
         <p className="text-white text-sm">
-          Nous sommes passionnés par l'innovation, les idées brillantes et la
+          {`Nous sommes passionnés par l'innovation, les idées brillantes et la
           mise en œuvre qui les rassemble pour créer une expérience unique et
           enrichissante. Si vous l'êtes aussi, appelez-nous ou envoyez-nous un
-          e-mail pour commencer.
+          e-mail pour commencer.`}
         </p>
         <Link
           href={"/contact"}

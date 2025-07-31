@@ -13,13 +13,13 @@ export default function About() {
             Transformations.
           </p>
           <p className="text-sm text-justify leading-6">
-            Entreprise d'ingénierie et services informatiques, composée
+            {`Entreprise d'ingénierie et services informatiques, composée
             d'experts internationaux dans des technologies de développement
             d'application web & desktop. Nous accompagnons nos clients dans
             leurs transformations digitales, dans la phase d'étude ou la phase
             d'implémentation. Depuis 2015, nos clients bénéficient de notre
             créativité ergonomique, de notre maîtrise du métier et de notre
-            puissance de travail.
+            puissance de travail.`}
           </p>
         </div>
         <div className="w-full lg:w-1/2 flex justify-center lg:justify-end">

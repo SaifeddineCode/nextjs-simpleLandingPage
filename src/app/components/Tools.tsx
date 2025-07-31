@@ -43,8 +43,8 @@ export default function Tools() {
           Notre Approche
         </h3>
         <span className="text-black text-sm text-center">
-          Nous gérons vos Systèmes d'Information Clés en Main, vous permettant
-          de vous concentrer sur le coeur de vos Métiers.
+          {`Nous gérons vos Systèmes d'Information Clés en Main, vous permettant
+          de vous concentrer sur le coeur de vos Métiers.`}
         </span>
       </div>
       <div className="flex flex-wrap p-5 md:p-10 items-center gap-10 ">
